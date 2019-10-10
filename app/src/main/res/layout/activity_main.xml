@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.opengl.GLSurfaceView
+        android:id="@+id/gl_surface"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <LinearLayout
+        android:id="@+id/hideControls"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerInParent="true"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <Button
+            android:id="@+id/hide"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:layout_marginBottom="10dp"
+            android:onClick="onClick"
+            android:text="Hide"
+            android:textAllCaps="false" />
+
+        <Button
+            android:id="@+id/peerOne"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:layout_marginBottom="10dp"
+            android:onClick="onClick"
+            android:text="p1 1 -> Peer One collect ice candidate and send offer"
+            android:textAllCaps="false" />
+
+        <Button
+            android:id="@+id/fetchPeerTwoSdp"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:layout_marginBottom="10dp"
+            android:onClick="onClick"
+            android:text="p1 3 -> fetch Peer Two Sdp set remote send iceCD of peerOne to server"
+            android:textAllCaps="false" />
+
+        <Button
+            android:id="@+id/fetchPeerOneSdp"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:layout_marginBottom="10dp"
+            android:onClick="onClick"
+            android:text="p2 2 -> fetch Peer One Sdp and setRemote and create answer for p1"
+            android:textAllCaps="false" />
+
+        <Button
+            android:id="@+id/peerOneFetchCandidates"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:layout_marginBottom="10dp"
+            android:onClick="onClick"
+            android:text="p2 4 -> fetch Peer One Candidates and set to peer2 and send p2 ice's"
+            android:textAllCaps="false" />
+
+        <Button
+            android:id="@+id/peerTwoFetchCandidates"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:onClick="onClick"
+            android:text="p1 5 -> fetch Peer two Candidates and set to peer1"
+            android:textAllCaps="false" />
+    </LinearLayout>
+
+
+</RelativeLayout>
